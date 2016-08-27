@@ -36,13 +36,13 @@
                                     if($('.group-list .round').length == all.length){
                                         $('.group-list').attr('data-loading', 'false');
                                         _this.text('START').attr('disabled', false).removeClass('loading active');
-                                        return clearTimeout(t1, t2);
+                                        return clearTimeout(t1), clearTimeout(t2);
                                     }
                                 }
                             })(k), k * 1500);
                         }
                     }
-                })(i), i * 1500 * parseInt(all.length/group_num));
+                })(i), 1500 );
             }
         }else {
             $('.group-list').attr('data-loading', 'false');
