@@ -30,7 +30,8 @@
                             var t2 = setTimeout((function(k){
                                 return function() {
                                     name = j[i][k];
-                                    var span = '<span class="round animated bounceInDown">' + name + '</span>';
+                                    var span = '<div><span class="round animated bounceInDown">' + name + '</span></div>';
+
                                     flex.eq(i).append(span);
                                     if($('.group-list .round').length == all.length){
                                         $('.group-list').attr('data-loading', 'false');
@@ -38,10 +39,10 @@
                                         return clearTimeout(t1, t2);
                                     }
                                 }
-                            })(k), k * 800);
+                            })(k), k * 1500);
                         }
                     }
-                })(i), i * 1000 * parseInt(all.length/group_num));
+                })(i), i * 1500 * parseInt(all.length/group_num));
             }
         }else {
             $('.group-list').attr('data-loading', 'false');
