@@ -22,6 +22,7 @@ h3 {
     background-color: #000;
     border-style: solid;
     border-color: #fff #000 #fff #000;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
     transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
     -webkit-transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
@@ -41,6 +42,8 @@ h3 {
     height: 100vh;
     padding: 40px;
     box-sizing: border-box;
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    -webkit-transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 .group-list .flex-item:nth-child(1) {
     background-color: #5C6BC0;
@@ -59,14 +62,32 @@ h3 {
     width: 80px;
     height: 80px;
     color: #fff;
-    /*position: absolute;*/
+    position: relative;
     font-size: 16px;
     line-height: 80px;
     border-radius: 50%;
     margin: 10px;
-    background-color: #283593;
+    overflow: hidden;
+    background: center no-repeat;
+    background-size: 100% 100%;
+    user-select: none;
+    -webkit-user-select: none;
     transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
     -webkit-transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.over-layout {
+    background-color: rgba(40, 53, 147,.65);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    -webkit-transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.round:hover .over-layout{
+    background-color: rgba(40, 53, 147,.15);
 }
 .loading {
     transform-origin: center;
