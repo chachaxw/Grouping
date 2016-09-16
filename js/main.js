@@ -40,9 +40,6 @@
             name: '吴亮亮',
             avatar: 'images/wuliangliang.png',
         }, {
-            name: '李汉健',
-            avatar: 'images/lihanjian.png',
-        }, {
             name: '汪金叶',
             avatar: 'images/wangjinye.png',
         }, {
