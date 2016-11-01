@@ -45,6 +45,12 @@
         }, {
             name: '王潇',
             avatar: 'images/wangxiao.png',
+        }, {
+            name: '李伟琪',
+            avatar: 'images/weiqi.png',
+        }, {
+            name: '谢进帅',
+            avatar: 'images/xiejinshuai.png',
         },
     ];
     var women_all = [
@@ -64,9 +70,12 @@
             name: '叶颖诗',
             avatar: 'images/yeyinshi.png',
         }, {
-            name: '彭敬嫦',
-            avatar: 'images/pengjingchang.png',
-        }
+            name: '陈施如',
+            avatar: 'images/chenshiru.png',
+        }, {
+            name: '李嘉纯',
+            avatar: 'images/lijiachun.png',
+        },
     ];
 
     var all = man_all.concat(women_all);
