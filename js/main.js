@@ -4,8 +4,8 @@
             name: '周伟',
             avatar: 'images/zhouwei.png',
         }, {
-            name: '程少芳',
-            avatar: 'images/chengshaofang.png',
+            name: '陈少芳',
+            avatar: 'images/chenshaofang.png',
         }, {
             name: '陈宇哲',
             avatar: 'images/chenyuzhe.png',
@@ -19,20 +19,11 @@
             name: '张彦蔚',
             avatar: 'images/zhangyanwei.png',
         }, {
-            name: '李昌智',
-            avatar: 'images/lichangzhi.png',
-        }, {
-            name: '李汉健',
-            avatar: 'images/lihanjian.png',
-        }, {
             name: '刘克亮',
             avatar: 'images/liukeliang.png',
         }, {
             name: '罗云志',
             avatar: 'images/luoyunzhi.png',
-        }, {
-            name: '毛阿斌',
-            avatar: 'images/maoabing.png',
         }, {
             name: '王斌',
             avatar: 'images/wangbin.png',
@@ -46,11 +37,14 @@
             name: '王潇',
             avatar: 'images/wangxiao.png',
         }, {
-            name: '李伟琪',
-            avatar: 'images/weiqi.png',
-        }, {
             name: '谢进帅',
             avatar: 'images/xiejinshuai.png',
+        }, {
+            name: '李心骋',
+            avatar: 'images/lixincheng.png',
+        }, {
+            name: '黄志坡',
+            avatar: 'images/huangzhipo.png',
         },
     ];
     var women_all = [
@@ -64,7 +58,7 @@
             name: '张嘉炜',
             avatar: 'images/zhangjiawei.png',
         }, {
-            name: '谢昕怡',
+            name: '李小霞',
             avatar: 'images/xiexinyi.png',
         }, {
             name: '叶颖诗',
@@ -75,6 +69,12 @@
         }, {
             name: '李嘉纯',
             avatar: 'images/lijiachun.png',
+        }, {
+            name: '曹哲',
+            avatar: 'images/caozhe.png',
+        }, {
+            name: '刘诗婷',
+            avatar: 'images/liushiting.png',
         },
     ];
 
