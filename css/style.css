@@ -86,6 +86,9 @@ h3 {
     transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
     -webkit-transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+.round:hover {
+  color: rgba(255,255,255,0);
+}
 .round:hover .over-layout{
     background-color: rgba(40, 53, 147,.15);
 }

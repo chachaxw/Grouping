@@ -67,9 +67,6 @@
             name: '陈施如',
             avatar: 'images/chenshiru.png',
         }, {
-            name: '李嘉纯',
-            avatar: 'images/lijiachun.png',
-        }, {
             name: '曹哲',
             avatar: 'images/caozhe.png',
         }, {
