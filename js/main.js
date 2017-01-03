@@ -2,7 +2,7 @@ $(document).ready(function() {
     var allMan = data.man_all,
         allWomen = data.women_all,
         num = 4,
-        time = 1500;
+        time = 2000;
 
     getGroup(allMan, allWomen, num, time);
 });
@@ -22,15 +22,14 @@ function getGroup(allMan, allWomen, num, time){
             _this.text('WAITING').attr('disabled', true).addClass('loading active');
 
             var j = s(allMan, allWomen, num, all);
-
-            for(var i = 0, l = j.length; i < l ; i ++) {
+            console.log(j);
+            for(var i = 0, l = j.length; i < l ; i += 1) {
                 flex.eq(i).empty();
                 var t1 = setTimeout((function(i) {
                     return function() {
-                        for(var k = 0, h = j[i].length; k < h; k++) {
+                        for(var k = 0, h = j[i].length; k < h; k += 1) {
                             var t2 = setTimeout((function(k){
                                 return function() {
-                                    console.log(k);
                                     name = j[i][k].name;
                                     avatar = j[i][k].avatar;
                                     var span = '<div><span class="round animated bounceInDown" style="background-image: url(' + avatar + ')"><span class="over-layout"></span>' + name + '</span></div>';
@@ -41,11 +40,12 @@ function getGroup(allMan, allWomen, num, time){
 
                                         return clearTimeout(t1), clearTimeout(t2);
                                     }
+                                    return k;
                                 }
-                            })(k), k * 1500);
+                            })(k), k * time);
                         }
                     }
-                })(i), 1500 );
+                })(i), time);
             }
         }else {
             $('.group-list').attr('data-loading', 'false');
@@ -78,6 +78,5 @@ function s(man_all, women_all, group_num, all) {
     for (var i = 0; i < all.length; i++) {
        rs[i % group_num].push(all[i]);
     }
-    console.log(rs);
     return rs;
 }

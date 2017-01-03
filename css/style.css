@@ -7,7 +7,7 @@ h3 {
 }
 .start-button {
     position: absolute;
-    top: 50%;
+    bottom: 150px;
     left: 50%;
     width: 64px;
     height: 64px;
@@ -17,7 +17,6 @@ h3 {
     border-radius: 50%;
     user-select: none;
     margin-left: -32px;
-    margin-top: -32px;
     -webkit-user-select: none;
     background-color: #000;
     border-style: solid;
