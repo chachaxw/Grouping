@@ -1,84 +1,17 @@
-;(function(){
-    var man_all = [
-        {
-            name: '周伟',
-            avatar: 'images/zhouwei.png',
-        }, {
-            name: '陈少芳',
-            avatar: 'images/chenshaofang.png',
-        }, {
-            name: '陈宇哲',
-            avatar: 'images/chenyuzhe.png',
-        }, {
-            name: '江育麟',
-            avatar: 'images/jiangyulin.png',
-        }, {
-            name: '柯宇楠',
-            avatar: 'images/keyunan.png',
-        }, {
-            name: '张彦蔚',
-            avatar: 'images/zhangyanwei.png',
-        }, {
-            name: '刘克亮',
-            avatar: 'images/liukeliang.png',
-        }, {
-            name: '罗云志',
-            avatar: 'images/luoyunzhi.png',
-        }, {
-            name: '王斌',
-            avatar: 'images/wangbin.png',
-        }, {
-            name: '吴亮亮',
-            avatar: 'images/wuliangliang.png',
-        }, {
-            name: '汪金叶',
-            avatar: 'images/wangjinye.png',
-        }, {
-            name: '王潇',
-            avatar: 'images/wangxiao.png',
-        }, {
-            name: '谢进帅',
-            avatar: 'images/xiejinshuai.png',
-        }, {
-            name: '李心骋',
-            avatar: 'images/lixincheng.png',
-        }, {
-            name: '黄志坡',
-            avatar: 'images/huangzhipo.png',
-        },
-    ];
-    var women_all = [
-        {
-            name: '杨洁',
-            avatar: 'images/yangjie.png',
-        }, {
-            name: '林素娜',
-            avatar: 'images/linsuna.png',
-        }, {
-            name: '张嘉炜',
-            avatar: 'images/zhangjiawei.png',
-        }, {
-            name: '李小霞',
-            avatar: 'images/xiexinyi.png',
-        }, {
-            name: '叶颖诗',
-            avatar: 'images/yeyinshi.png',
-        }, {
-            name: '陈施如',
-            avatar: 'images/chenshiru.png',
-        }, {
-            name: '曹哲',
-            avatar: 'images/caozhe.png',
-        }, {
-            name: '刘诗婷',
-            avatar: 'images/liushiting.png',
-        },
-    ];
+$(document).ready(function() {
+    var allMan = data.man_all,
+        allWomen = data.women_all,
+        num = 4,
+        time = 1500;
 
-    var all = man_all.concat(women_all);
-    var group_num = 4;
+    getGroup(allMan, allWomen, num, time);
+});
 
-    var flex = $('.flex-item');
+function getGroup(allMan, allWomen, num, time){
+
+    var all = allMan.concat(allWomen);
+
+    var flex = $('.flex-item>div');
     var btn = $('.start-button');
 
     btn.on('click', function() {
@@ -88,16 +21,16 @@
             $('.group-list').attr('data-loading', 'true');
             _this.text('WAITING').attr('disabled', true).addClass('loading active');
 
-            var j = s(man_all, women_all, group_num, all);
+            var j = s(allMan, allWomen, num, all);
 
             for(var i = 0, l = j.length; i < l ; i ++) {
                 flex.eq(i).empty();
                 var t1 = setTimeout((function(i) {
-                    console.log(i);
                     return function() {
                         for(var k = 0, h = j[i].length; k < h; k++) {
                             var t2 = setTimeout((function(k){
                                 return function() {
+                                    console.log(k);
                                     name = j[i][k].name;
                                     avatar = j[i][k].avatar;
                                     var span = '<div><span class="round animated bounceInDown" style="background-image: url(' + avatar + ')"><span class="over-layout"></span>' + name + '</span></div>';
@@ -105,6 +38,7 @@
                                     if($('.group-list .round').length == all.length){
                                         $('.group-list').attr('data-loading', 'false');
                                         _this.text('START').attr('disabled', false).removeClass('loading active');
+
                                         return clearTimeout(t1), clearTimeout(t2);
                                     }
                                 }
@@ -120,8 +54,14 @@
 
     });
 
-})();
+}
 
+/**
+ * @param man_all 男生总数
+ * @param women_all 女生总数
+ * @param group_num 分组数
+ * @param all 总人数
+ */
 function s(man_all, women_all, group_num, all) {
     man_all.sort(function () {
        return 0.5 - Math.random();

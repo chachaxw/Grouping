@@ -59,12 +59,12 @@ h3 {
 }
 .round {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     color: #fff;
     position: relative;
-    font-size: 16px;
-    line-height: 80px;
+    font-size: 14px;
+    line-height: 64px;
     border-radius: 50%;
     margin: 10px;
     overflow: hidden;
