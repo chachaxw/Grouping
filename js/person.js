@@ -45,6 +45,24 @@ var data = {
         }, {
             name: '黄志坡',
             avatar: 'images/huangzhipo.png',
+        }, {
+            name: '陈锦东',
+            avatar: 'images/chenjindong.png',
+        }, {
+            name: '齐晓海',
+            avatar: 'images/qixiaohai.png',
+        }, {
+            name: '黄哲宇',
+            avatar: 'images/default.png',
+        }, {
+            name: '张晶',
+            avatar: 'images/default.png',
+        }, {
+            name: '林玮琦',
+            avatar: 'images/default.png',
+        }, {
+            name: '李汉见',
+            avatar: 'images/lihanjian.png',
         },
     ],
     women_all: [
@@ -58,9 +76,6 @@ var data = {
             name: '张嘉炜',
             avatar: 'images/zhangjiawei.png',
         }, {
-            name: '李小霞',
-            avatar: 'images/xiexinyi.png',
-        }, {
             name: '叶颖诗',
             avatar: 'images/yeyinshi.png',
         }, {
@@ -72,6 +87,30 @@ var data = {
         }, {
             name: '刘诗婷',
             avatar: 'images/liushiting.png',
+        }, {
+            name: '李文慧',
+            avatar: 'images/liwenhui.png',
+        }, {
+            name: '李晓芬',
+            avatar: 'images/lixiaofen.png',
+        }, {
+            name: '杜梦澜',
+            avatar: 'images/dumenglan.png',
+        }, {
+            name: '肖杨',
+            avatar: 'images/xiaoyang.png',
+        }, {
+            name: '许晓薇',
+            avatar: 'images/xuxiaowei.png',
+        }, {
+            name: '彭敬嫦',
+            avatar: 'images/pengjingchang.png',
+        }, {
+            name: '李嘉纯',
+            avatar: 'images/lijiachun.png',
+        }, {
+            name: '胡月伶',
+            avatar: 'images/lijiachun.png',
         },
     ]
 }
