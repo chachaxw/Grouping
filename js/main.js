@@ -2,7 +2,7 @@ $(document).ready(function() {
     var allMan = data.man_all,
         allWomen = data.women_all,
         num = 4,
-        time = 2000;
+        time = 3000;
 
     getGroup(allMan, allWomen, num, time);
 });
@@ -40,7 +40,6 @@ function getGroup(allMan, allWomen, num, time){
 
                                         return clearTimeout(t1), clearTimeout(t2);
                                     }
-                                    return k;
                                 }
                             })(k), k * time);
                         }
@@ -57,6 +56,7 @@ function getGroup(allMan, allWomen, num, time){
 }
 
 /**
+ * 分组算法
  * @param man_all 男生总数
  * @param women_all 女生总数
  * @param group_num 分组数
