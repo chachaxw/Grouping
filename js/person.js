@@ -31,8 +31,8 @@ var data = {
             name: '吴亮亮',
             avatar: 'images/wuliangliang.png',
         }, {
-            name: '汪金叶',
-            avatar: 'images/wangjinye.png',
+            name: '汪叶金',
+            avatar: 'images/wangyejin.png',
         }, {
             name: '王潇',
             avatar: 'images/wangxiao.png',
@@ -61,7 +61,7 @@ var data = {
             name: '林玮琦',
             avatar: 'images/default.png',
         }, {
-            name: '李汉见',
+            name: '李汉健',
             avatar: 'images/lihanjian.png',
         },
     ],
