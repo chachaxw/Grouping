@@ -4,9 +4,11 @@ $(document).ready(function() {
         num = 4,
         time = 3000;
 
-    getGroup(allMan, allWomen, num, time);
+    initBtn(allMan, allWomen, num, time);
+    
 });
 
+// 分组动画效果1
 function getGroup(allMan, allWomen, num, time){
 
     var all = allMan.concat(allWomen);
@@ -61,6 +63,7 @@ function getGroup(allMan, allWomen, num, time){
  * @param women_all 女生总数
  * @param group_num 分组数
  * @param all 总人数
+ * @return rs 分组结果
  */
 function s(man_all, women_all, group_num, all) {
     man_all.sort(function () {
@@ -78,5 +81,68 @@ function s(man_all, women_all, group_num, all) {
     for (var i = 0; i < all.length; i++) {
        rs[i % group_num].push(all[i]);
     }
+
     return rs;
+}
+
+/**
+ * 二维数组整理
+ */
+function z(arr) {
+  var newArr = [];
+  for(var i = 0, l = arr.length; i < l ; i += 1) {
+    for(var k = 0, h = arr[i].length; k < h; k += 1) {
+      newArr.push({
+        id: i,
+        user: arr[i][k],
+      });
+    }
+  }
+
+  return newArr;
+}
+
+/**
+ * 按钮点击效果
+ */
+function initBtn(allMan, allWomen, num, time) {
+  var btn = $('.start-button');
+  var isGrouping = false;
+  var turbVal = { val: 0.000001 };
+  var turbValX = { val: 0.000001 };
+  var turb = $('#filter feTurbulence')[0];
+
+  var btnTl = new TimelineLite({
+    paused: true,
+    onUpdate: function() {
+      turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+    },
+    onComplete: function() {
+      btnTl.reverse();
+    },
+    onReverseComplete: function() {
+      btnTl.restart();
+    }
+  });
+  btnTl.to(turbValX, 0.6, { val: 0.02, ease: Power0.easeNone }, 0);
+  btnTl.to(turbVal, 0.1, { val: 0.02 ,ease: Power0.easeNone }, 0);
+
+  btn.on('click', function() {
+    if(isGrouping) {
+      btn.text('START');
+      btnTl.pause()
+      var btnTl2 = new TimelineLite({
+        onUpdate: function() {
+          turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+        }
+      });
+      btnTl2.to(turbVal, 0.1, { val: 0.000001 });
+      btnTl2.to(turbValX, 0.1, { val: 0.000001 }, 0);
+      isGrouping = false;
+    } else {
+      btn.text('WAITING');
+      btnTl.play();
+      isGrouping = true;
+    }
+  });
 }

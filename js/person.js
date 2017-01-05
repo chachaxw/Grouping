@@ -63,6 +63,9 @@ var data = {
         }, {
             name: '李汉健',
             avatar: 'images/lihanjian.png',
+        }, {
+            name: '毛阿斌',
+            avatar: 'images/maoabin.png',
         },
     ],
     women_all: [
@@ -79,9 +82,6 @@ var data = {
             name: '叶颖诗',
             avatar: 'images/yeyinshi.png',
         }, {
-            name: '陈施如',
-            avatar: 'images/chenshiru.png',
-        }, {
             name: '曹哲',
             avatar: 'images/caozhe.png',
         }, {
@@ -91,8 +91,8 @@ var data = {
             name: '李文慧',
             avatar: 'images/liwenhui.png',
         }, {
-            name: '李晓芬',
-            avatar: 'images/lixiaofen.png',
+            name: '陈晓芬',
+            avatar: 'images/chenxiaofen.png',
         }, {
             name: '杜梦澜',
             avatar: 'images/dumenglan.png',
