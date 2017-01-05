@@ -110,7 +110,7 @@ var data = {
             avatar: 'images/lijiachun.png',
         }, {
             name: '胡月伶',
-            avatar: 'images/lijiachun.png',
+            avatar: 'images/default.png',
         },
     ]
 }
