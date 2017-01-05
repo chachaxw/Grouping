@@ -2,10 +2,10 @@ $(document).ready(function() {
     var allMan = data.man_all,
         allWomen = data.women_all,
         num = 4,
-        time = 3000;
+        time = 1000;
 
-    initBtn(allMan, allWomen, num, time);
-    
+    getGroup1(allMan, allWomen, num, time);
+
 });
 
 // 分组动画效果1
@@ -24,7 +24,6 @@ function getGroup(allMan, allWomen, num, time){
             _this.text('WAITING').attr('disabled', true).addClass('loading active');
 
             var j = s(allMan, allWomen, num, all);
-            console.log(j);
             for(var i = 0, l = j.length; i < l ; i += 1) {
                 flex.eq(i).empty();
                 var t1 = setTimeout((function(i) {
@@ -103,15 +102,15 @@ function z(arr) {
 }
 
 /**
- * 按钮点击效果
+ * 分组动画效果2
  */
-function initBtn(allMan, allWomen, num, time) {
+function getGroup1(allMan, allWomen, num, time) {
   var btn = $('.start-button');
-  var isGrouping = false;
+  var container = $('.flex-item>div');
   var turbVal = { val: 0.000001 };
   var turbValX = { val: 0.000001 };
   var turb = $('#filter feTurbulence')[0];
-
+  // 按钮动画
   var btnTl = new TimelineLite({
     paused: true,
     onUpdate: function() {
@@ -127,22 +126,38 @@ function initBtn(allMan, allWomen, num, time) {
   btnTl.to(turbValX, 0.6, { val: 0.02, ease: Power0.easeNone }, 0);
   btnTl.to(turbVal, 0.1, { val: 0.02 ,ease: Power0.easeNone }, 0);
 
+  // 分组结果
+  var all = allMan.concat(allWomen);
+  var result = z(s(allMan, allWomen, num, all));
+
   btn.on('click', function() {
-    if(isGrouping) {
-      btn.text('START');
-      btnTl.pause()
-      var btnTl2 = new TimelineLite({
-        onUpdate: function() {
-          turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+    btn.text('WAITING').attr('disabled', true);
+    btnTl.play();
+    for (var i = 0, l = result.length; i < l; i += 1) {
+      container.eq(result[i].id).empty();
+      var t = setTimeout(function(i) {
+        return function() {
+          var index = result[i].id;
+          var span = '<div><span class="round animated bounceInDown" style="background-image: url(' +
+          result[i].user.avatar + ')"><span class="over-layout"></span>' +
+          result[i].user.name + '</span></div>';
+          container.eq(index).append(span);
+
+          if($('.group-list .round').length == all.length){
+            btn.text('START').attr('disabled', false);
+            btnTl.pause()
+            var btnTl2 = new TimelineLite({
+              onUpdate: function() {
+                turb.setAttribute('baseFrequency', turbVal.val + ' ' + turbValX.val);
+              }
+            });
+            btnTl2.to(turbVal, 0.1, { val: 0.000001 });
+            btnTl2.to(turbValX, 0.1, { val: 0.000001 }, 0);
+
+            return clearTimeout(t);
+          }
         }
-      });
-      btnTl2.to(turbVal, 0.1, { val: 0.000001 });
-      btnTl2.to(turbValX, 0.1, { val: 0.000001 }, 0);
-      isGrouping = false;
-    } else {
-      btn.text('WAITING');
-      btnTl.play();
-      isGrouping = true;
+      }(i), i * time);
     }
   });
 }

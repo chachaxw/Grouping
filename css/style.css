@@ -47,6 +47,7 @@ h3 {
 }
 .start-button:disabled {
   border-color: #fff;
+  color: #fff;
   background-color: #000;
 }
 .group-list {
