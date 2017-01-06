@@ -92,12 +92,12 @@ function z(arr) {
   for(var i = 0, l = arr.length; i < l ; i += 1) {
     for(var k = 0, h = arr[i].length; k < h; k += 1) {
       newArr.push({
-        id: i,
+        group: i,
         user: arr[i][k],
       });
     }
   }
-
+  console.log(newArr);
   return newArr;
 }
 
@@ -134,10 +134,10 @@ function getGroup1(allMan, allWomen, num, time) {
     btn.text('WAITING').attr('disabled', true);
     btnTl.play();
     for (var i = 0, l = result.length; i < l; i += 1) {
-      container.eq(result[i].id).empty();
+      container.eq(result[i].group).empty();
       var t = setTimeout(function(i) {
         return function() {
-          var index = result[i].id;
+          var index = result[i].group;
           var span = '<div><span class="round animated bounceInDown" style="background-image: url(' +
           result[i].user.avatar + ')"><span class="over-layout"></span>' +
           result[i].user.name + '</span></div>';
