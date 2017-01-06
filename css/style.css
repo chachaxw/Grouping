@@ -11,11 +11,13 @@ h3 {
     font-size: 16px;
 }
 .big-title {
-    font-size: 180px;
+    font-size: 150px;
     position: fixed;
-    opacity: .1;
+    min-width: 600px;
+    opacity: .3;
     top: 50%;
     left: 50%;
+    z-index: 99;
     background-size: cover;
     font-weight: bolder;
     color: #2dceef;
@@ -24,9 +26,10 @@ h3 {
     text-align: center;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
-    background-image: -webkit-linear-gradient(#EE58EE 0%, #FB8574 99%);
+    background-image: url(../images/background.jpg);
+    /*background-image: -webkit-linear-gradient(#EE58EE 0%, #FB8574 99%);
     background-image: -o-linear-gradient(#EE58EE 0%, #FB8574 99%);
-    background-image: linear-gradient(#EE58EE 0%, #FB8574 99%);
+    background-image: linear-gradient(#EE58EE 0%, #FB8574 99%);*/
 }
 .start-button {
     position: fixed;

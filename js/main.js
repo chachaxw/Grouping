@@ -2,7 +2,7 @@ $(document).ready(function() {
     var allMan = data.man_all,
         allWomen = data.women_all,
         num = 4,
-        time = 1000;
+        time = 2000;
 
     getGroup1(allMan, allWomen, num, time);
 
