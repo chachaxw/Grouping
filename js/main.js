@@ -97,7 +97,7 @@ function z(arr) {
       });
     }
   }
-  console.log(newArr);
+  // console.log(newArr);
   return newArr;
 }
 

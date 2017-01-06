@@ -53,7 +53,7 @@ var data = {
             avatar: 'images/qixiaohai.png',
         }, {
             name: '黄哲宇',
-            avatar: 'images/default.png',
+            avatar: 'images/huangzheyu.png',
         }, {
             name: '张晶',
             avatar: 'images/zhangjing.png',

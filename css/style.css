@@ -10,6 +10,24 @@ h3 {
     padding: 20px 10px;
     font-size: 16px;
 }
+.big-title {
+    font-size: 180px;
+    position: fixed;
+    opacity: .1;
+    top: 50%;
+    left: 50%;
+    background-size: cover;
+    font-weight: bolder;
+    color: #2dceef;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    background-image: -webkit-linear-gradient(#EE58EE 0%, #FB8574 99%);
+    background-image: -o-linear-gradient(#EE58EE 0%, #FB8574 99%);
+    background-image: linear-gradient(#EE58EE 0%, #FB8574 99%);
+}
 .start-button {
     position: fixed;
     bottom: 100px;
