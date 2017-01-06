@@ -124,7 +124,7 @@ function getGroup1(allMan, allWomen, num, time) {
     }
   });
   btnTl.to(turbValX, 0.6, { val: 0.02, ease: Power0.easeNone }, 0);
-  btnTl.to(turbVal, 0.1, { val: 0.02 ,ease: Power0.easeNone }, 0);
+  btnTl.to(turbVal, 0.1, { val: 0.2,ease: Power0.easeNone }, 0);
 
   // 分组结果
   var all = allMan.concat(allWomen);

@@ -56,10 +56,10 @@ var data = {
             avatar: 'images/default.png',
         }, {
             name: '张晶',
-            avatar: 'images/default.png',
+            avatar: 'images/zhangjing.png',
         }, {
             name: '林玮琦',
-            avatar: 'images/default.png',
+            avatar: 'images/linweiqi.png',
         }, {
             name: '李汉健',
             avatar: 'images/lihanjian.png',
@@ -110,7 +110,7 @@ var data = {
             avatar: 'images/lijiachun.png',
         }, {
             name: '胡月伶',
-            avatar: 'images/default.png',
+            avatar: 'images/huyueling.png',
         },
     ]
 }
