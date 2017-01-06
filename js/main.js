@@ -89,11 +89,11 @@ function s(man_all, women_all, group_num, all) {
  */
 function z(arr) {
   var newArr = [];
-  for(var i = 0, l = arr.length; i < l ; i += 1) {
-    for(var k = 0, h = arr[i].length; k < h; k += 1) {
+  for(var i = 0, l = arr[i].length; i < l ; i += 1) {
+    for(var k = 0, h = arr.length; k < h; k += 1) {
       newArr.push({
-        group: i,
-        user: arr[i][k],
+        group: k,
+        user: arr[k][i],
       });
     }
   }
