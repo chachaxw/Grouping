@@ -124,7 +124,7 @@ function getGroup1(allMan, allWomen, num, time) {
     }
   });
   btnTl.to(turbValX, 0.6, { val: 0.02, ease: Power0.easeNone }, 0);
-  btnTl.to(turbVal, 0.1, { val: 0.2,ease: Power0.easeNone }, 0);
+  btnTl.to(turbVal, 0.1, { val: 0.1, ease: Power0.easeNone }, 0);
 
   // 分组结果
   var all = allMan.concat(allWomen);
@@ -133,6 +133,7 @@ function getGroup1(allMan, allWomen, num, time) {
   btn.on('click', function() {
     btn.text('WAITING').attr('disabled', true);
     btnTl.play();
+
     for (var i = 0, l = result.length; i < l; i += 1) {
       container.eq(result[i].group).empty();
       var t = setTimeout(function(i) {

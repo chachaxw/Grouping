@@ -1,10 +1,10 @@
 body {
     text-align: center;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(223deg, #00CF97 0%, #00BBEB 100%);
-    background-image: -o-linear-gradient(223deg, #00CF97 0%, #00BBEB 100%);
-    background-image: linear-gradient(313deg, #00CF97 0%, #00BBEB 100%);
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(223deg, #4efde0 0%, rgb(13, 122, 246) 100%);
+    background-image: -o-linear-gradient(223deg, #4efde0 0%, rgb(13, 122, 246) 100%);
+    background-image: linear-gradient(313deg, #4efde0 0%, rgb(13, 122, 246) 100%);
 }
 h3 {
     padding: 20px 10px;
@@ -46,7 +46,7 @@ h3 {
     background-color: #000;
     border-style: solid;
     -webkit-filter: url("#filter");
-    filter: url("/#filter");
+    filter: url("#filter");
     border-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     outline: 90px solid transparent !important;
